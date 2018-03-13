@@ -2,8 +2,7 @@
 //例如 *://*.google.com.tw/* ，作為查詢字串不被接受因為 host 是一個片段表達式
 var urlPattern = [
     "*://netholiday.kh.edu.tw/*",
-    "*://163.16.5.199/*",
-    "*://phprun.reh.tw/*"
+    "*://163.16.5.199/*"
 ];
 
 //利用 tabs.query api 查找畫面上的所有 tab
