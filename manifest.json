@@ -20,6 +20,10 @@
     "content_scripts": [{
         "matches": ["*://netholiday.kh.edu.tw/*", "*://163.16.5.199/*"],
         "js": ["assets/js/add_button.js"]
+    },
+    {
+        "matches": ["*://netholiday.reh.tw/*"],
+        "js": ["assets/js/verify_install.js"]
     }],
     "background": {
         "scripts": ["event.js"],

@@ -1,3 +1,11 @@
+/*
+ * 網路假期 - 答案共享資料庫
+ * https://netholiday.reh.tw/
+ *
+ * Copyright 2018 張文相 Zhang Wenxiang
+ * https://www.facebook.com/GoneToneDY
+ * https://blog.reh.tw/
+ */
 /* 創建 Div 元素 */
 var element1 = document.getElementById("under"); //外層元素 ID
 

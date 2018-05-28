@@ -1,8 +1,17 @@
+/*
+ * 網路假期 - 答案共享資料庫
+ * https://netholiday.reh.tw/
+ *
+ * Copyright 2018 張文相 Zhang Wenxiang
+ * https://www.facebook.com/GoneToneDY
+ * https://blog.reh.tw/
+ */
 //指定比對的 url，不允許片段表達式
 //例如 *://*.google.com.tw/* ，作為查詢字串不被接受因為 host 是一個片段表達式
 var urlPattern = [
     "*://netholiday.kh.edu.tw/*",
-    "*://163.16.5.199/*"
+    "*://163.16.5.199/*",
+    "*://netholiday.reh.tw/*"
 ];
 
 //利用 tabs.query api 查找畫面上的所有 tab
