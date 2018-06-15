@@ -76,10 +76,10 @@ function createAddAnswerButton() {
 
                 if (topic == "." || topic == " " || topic == "") { //判斷是文字還是圖片
                     var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                    window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 } else {
                     var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                    window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 }
             };  //設定按鈕 onclick
 
@@ -92,10 +92,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -108,10 +108,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -124,10 +124,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -140,10 +140,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -156,10 +156,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -172,10 +172,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -188,10 +188,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -204,10 +204,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -220,10 +220,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
@@ -236,10 +236,10 @@ function createAddAnswerButton() {
 
                         if (topic == "." || topic == " " || topic == "") {
                             var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         } else {
                             var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURI(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURI(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
+                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                         }
                     };  //設定按鈕 onclick
                 };
