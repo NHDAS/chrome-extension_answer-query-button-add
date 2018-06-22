@@ -69,10 +69,13 @@ function createAddAnswerButton() {
             buttonCreate.id = "addAnswerButton"; //設定按鈕 ID
             buttonCreate.type = "button"; //設定按鈕類型
 
-            //預設
+            //設定按鈕 onclick
             buttonCreate.onclick = function() {
+                var numberTitle = document.getElementById("title").innerText.replace(/(^\s*)|(\s*$)/g, ""); //取得目前題目為第幾題文字
+                var number = numberTitle.slice(1, numberTitle.length - 1); //過濾後取得目前題目為第幾題
+
                 var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                var getAnswer = document.getElementsByClassName("radio")[getNumberArray[0]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
+                var getAnswer = document.getElementsByClassName("radio")[getNumberArray[number - 1]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
 
                 if (topic == "." || topic == " " || topic == "") { //判斷是文字還是圖片
                     var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
@@ -81,169 +84,7 @@ function createAddAnswerButton() {
                     var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
                     window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 }
-            };  //設定按鈕 onclick
-
-            //判斷
-            if (linkList[0] != null) {
-                linkList[0].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[0]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[1] != null) {
-                linkList[1].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[1]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[2] != null) {
-                linkList[2].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[2]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[3] != null) {
-                linkList[3].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[3]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[4] != null) {
-                linkList[4].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[4]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[5] != null) {
-                linkList[5].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[5]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[6] != null) {
-                linkList[6].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[6]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[7] != null) {
-                linkList[7].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[7]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[8] != null) {
-                linkList[8].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[8]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
-            if (linkList[9] != null) {
-                linkList[9].onclick = function() {
-                    buttonCreate.onclick = function() {
-                        var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
-                        var getAnswer = document.getElementsByClassName("radio")[getNumberArray[9]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
-
-                        if (topic == "." || topic == " " || topic == "") {
-                            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        } else {
-                            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                            window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
-                        }
-                    };  //設定按鈕 onclick
-                };
-            }
+            };
 
             element2.appendChild(buttonCreate); //插入按鈕
         }
