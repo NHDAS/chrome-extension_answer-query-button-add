@@ -28,14 +28,15 @@ function createAddAnswerButton() {
         var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
 
         //預設
-        if (topic == "." || topic == " " || topic == "") {
-            var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
+        var getTitle;
+        if (topic === "." || topic === " " || topic === "") {
+            getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
         } else {
-            var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
+            getTitle = document.getElementById("topic").innerText; //取得網路假期題目
         }
 
         /* 創建網路假期正確答案陣列 */
-        var getAnswerArray = new Array(); //宣告陣列
+        var getAnswerArray = []; //宣告陣列
         for (var i = 0; i < linkList.length; i++) {
             if (linkList[i].getElementsByClassName("ans-check")[0] != null) {
                 getAnswerArray[i] = linkList[i].getElementsByClassName("ans-dot")[0]; //取得網路假期正確答案陣列
@@ -45,17 +46,17 @@ function createAddAnswerButton() {
         }
 
         /* 將 A B C D E 選項轉換為數字 */
-        var getNumberArray = new Array(); //宣告陣列
+        var getNumberArray = []; //宣告陣列
         for (var i = 0; i < getAnswerArray.length; i++) {
-            if (getAnswerArray[i].innerText == "A") {
+            if (getAnswerArray[i].innerText.toUpperCase() === "A") {
                 getNumberArray[i] = 0;
-            } else if (getAnswerArray[i].innerText == "B") {
+            } else if (getAnswerArray[i].innerText.toUpperCase() === "B") {
                 getNumberArray[i] = 1;
-            } else if (getAnswerArray[i].innerText == "C") {
+            } else if (getAnswerArray[i].innerText.toUpperCase() === "C") {
                 getNumberArray[i] = 2;
-            } else if (getAnswerArray[i].innerText == "D") {
+            } else if (getAnswerArray[i].innerText.toUpperCase() === "D") {
                 getNumberArray[i] = 3;
-            } else if (getAnswerArray[i].innerText == "E") {
+            } else if (getAnswerArray[i].innerText.toUpperCase() === "E") {
                 getNumberArray[i] = 4;
             }
         }
@@ -77,11 +78,12 @@ function createAddAnswerButton() {
                 var topic = document.getElementById("topic").innerText.replace(/(^\s*)|(\s*$)/g, "");
                 var getAnswer = document.getElementsByClassName("radio")[getNumberArray[number - 1]].getElementsByTagName("label")[0].getElementsByTagName("div")[0]; //取得網路假期正確答案文字
 
-                if (topic == "." || topic == " " || topic == "") { //判斷是文字還是圖片
-                    var getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
+                var getTitle;
+                if (topic === "." || topic === " " || topic === "") { //判斷是文字還是圖片
+                    getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
                     window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 } else {
-                    var getTitle = document.getElementById("topic").innerText; //取得網路假期題目
+                    getTitle = document.getElementById("topic").innerText; //取得網路假期題目
                     window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 }
             };
