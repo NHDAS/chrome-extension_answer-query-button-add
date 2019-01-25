@@ -62,8 +62,8 @@ function createAddAnswerButton() {
         }
 
         if (element2 != null && getTitle != null && getNumberArray != null) {
-            buttonCreate = document.createElement("BUTTON"); //創建按鈕元素
-            buttonSetText = document.createTextNode("新增解答至資料庫"); //設定按鈕文字
+            var buttonCreate = document.createElement("BUTTON"); //創建按鈕元素
+            var buttonSetText = document.createTextNode("新增解答至資料庫"); //設定按鈕文字
 
             buttonCreate.appendChild(buttonSetText); //套用設定的按鈕文字
             buttonCreate.className = "btn btn-link text-warning"; //設定按鈕 Class
@@ -83,7 +83,12 @@ function createAddAnswerButton() {
                     getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
                     window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 } else {
-                    getTitle = document.getElementById("topic").innerText; //取得網路假期題目
+                    var getImage = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
+                    if (getImage != null) {
+                        getTitle = document.getElementById("topic").innerText + " " + getImage; //取得網路假期題目
+                    } else {
+                        getTitle = document.getElementById("topic").innerText; //取得網路假期題目
+                    }
                     window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Answer=" + encodeURIComponent(getAnswer.innerText.replace(/(^\s*)|(\s*$)/g, "").slice(2)) + "&Source=Plugin", "_blank");
                 }
             };
@@ -92,6 +97,7 @@ function createAddAnswerButton() {
         }
     }
 }
+
 window.onload = function() { //等待網頁載入完成
     setTimeout("createAddAnswerButton()", 500); //延遲 0.5 秒執行
 }

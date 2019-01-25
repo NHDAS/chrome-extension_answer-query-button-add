@@ -53,10 +53,10 @@ function createQueryAnswerButton() {
                 var getTitle;
                 if (topic === "." || topic === " " || topic === "") { //判斷是文字還是圖片
                     getTitle = document.getElementById("topic").getElementsByTagName("img")[0].src; //取得網路假期數學題目圖片網址
-                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Source=Plugin", "queryAnswer", config="height=650, width=500, toolbar=no, location=no, menubar=no, status=no, left=50, top=50");
+                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Source=Plugin", "queryAnswer", config = "height=650, width=500, toolbar=no, location=no, menubar=no, status=no, left=50, top=50");
                 } else {
                     getTitle = document.getElementById("topic").innerText; //取得網路假期題目
-                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Source=Plugin", "queryAnswer", config="height=650, width=500, toolbar=no, location=no, menubar=no, status=no, left=50, top=50");
+                    window.open(requestURL + "?Title=" + encodeURIComponent(getTitle.replace(/(^\s*)|(\s*$)/g, "")) + "&Source=Plugin", "queryAnswer", config = "height=650, width=500, toolbar=no, location=no, menubar=no, status=no, left=50, top=50");
                 }
             };  //設定按鈕 onclick
 
@@ -64,6 +64,7 @@ function createQueryAnswerButton() {
         }
     }
 }
+
 window.onload = function() { //等待網頁載入完成
     setTimeout("createQueryAnswerButton()", 500); //延遲 0.5 秒執行
 }
