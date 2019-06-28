@@ -6,7 +6,7 @@
  * https://www.facebook.com/GoneToneDY
  * https://blog.reh.tw/
  */
-var chrome_plugin_button = document.getElementById("chrome-install-plugin-button");
+const chrome_plugin_button = document.getElementById("chrome-install-plugin-button");
 
 if (chrome_plugin_button != null) {
     chrome_plugin_button.disabled = true; //禁用按鈕

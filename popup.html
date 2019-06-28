@@ -2,7 +2,7 @@
     網路假期 - 答案共享資料庫
     https://netholiday.reh.tw/
 
-    Copyright 2018 張文相 Zhang Wenxiang
+    Copyright 2019 張文相 Zhang Wenxiang
     https://www.facebook.com/GoneToneDY
     https://blog.reh.tw/
 -->
@@ -13,7 +13,7 @@
         <title>關於本插件</title>
         <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
     </head>
-    <body style="width: 500px;">
+    <body style="width: 550px;">
         <div class="container">
             <br>
             <div class="row">
@@ -26,33 +26,39 @@
             <br>
             <div class="row">
                 <div class="col-md-12">
-                    <label>或者手動貼上題目查詢解答</label>
+                    <label for="Title">或者手動貼上題目查詢解答</label>
                     <form class="form-inline" id="fontSubmin" name="fontSubmin" action="https://netholiday.reh.tw/query.php" method="GET" target="_blank">
                         <div class="input-group">
-                            <input type="test" class="form-control" id="Title" name="Title" required>
+                            <input type="text" class="form-control" id="Title" name="Title" required>
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit" onclick="fontSubmin();">查詢解答</button>
+                                <button class="btn btn-primary" type="submit">查詢解答</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
             <br><br>
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row mb-4">
+                <div class="col-6 mb-2">
                     <a class="btn btn-outline-primary btn-block" href="https://netholiday.reh.tw" target="_blank">網路假期 - 答案共享資料庫</a>
                 </div>
-                <div class="col-md-12">
+                <div class="col-6 mb-2">
+                    <a class="btn btn-outline-primary btn-block" href="https://www.facebook.com/netholiday.answer/" target="_blank">Facebook 粉絲專頁</a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-12 mb-2">
                     <a class="btn btn-outline-primary btn-block" href="https://chrome.google.com/webstore/detail/figcebmonllniaklhhjimjlgndjlgchd" target="_blank">Chrome 線上應用程式商店</a>
                 </div>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row mb-4">
+                <div class="col-6 mb-2">
                     <a class="btn btn-outline-primary btn-block" href="https://github.com/NHDAS/chrome-extension_answer-query-button-add" target="_blank">本插件開源至 GitHub</a>
                 </div>
+                <div class="col-6 mb-2">
+                    <a class="btn btn-outline-primary btn-block" href="https://github.com/NHDAS/chrome-extension_answer-query-button-add/issues" target="_blank">回報插件問題 (BUG)</a>
+                </div>
             </div>
-            <br><br>
         </div>
         <!-- <script src="assets/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
     </body>
