@@ -2,46 +2,35 @@
  * 網路假期 - 答案共享資料庫
  * https://netholiday.reh.tw/
  *
- * Copyright 2018 張文相 Zhang Wenxiang
+ * Copyright 2025 張文相 Zhang Wenxiang
  * https://www.facebook.com/GoneToneDY
  * https://blog.reh.tw/
  */
-//指定比對的 url，不允許片段表達式
-//例如 *://*.google.com.tw/* ，作為查詢字串不被接受因為 host 是一個片段表達式
-var urlPattern = [
-    "*://netholiday.kh.edu.tw/*",
-    "*://163.16.5.199/*",
-    "*://netholiday.reh.tw/*"
-];
 
-//利用 tabs.query api 查找畫面上的所有 tab
-function queryTabsAndShowPageActions(queryObject) {
-    chrome.tabs.query(queryObject,
-        function(tabs) {
-            if (tabs && tabs.length > 0) {
-                for (var i = 0; i < tabs.length; i++) {
-                    //在加載完畢的 tab 上，使用 chrome.pageAction.show 啟用按鈕
-                    if (tabs[i].status === "complete") chrome.pageAction.show(tabs[i].id);
-                }
-            }
-        }
-    );
-}
+chrome.runtime.onInstalled.addListener(() => {
+    // Page actions are disabled by default and enabled on select tabs
+    chrome.action.disable();
 
-//第一次的初始化
-chrome.runtime.onInstalled.addListener(function() {
-    queryTabsAndShowPageActions({
-        "active": false,
-        "currentWindow": true,
-        "url": urlPattern
-    });
-});
+    // Clear all rules to ensure only our expected rules are set
+    chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
+        // Declare a rule to enable the action on example.com pages
+        let exampleRule = {
+            conditions: [
+                new chrome.declarativeContent.PageStateMatcher({
+                    pageUrl: {hostSuffix: 'netholiday.kh.edu.tw'},
+                }),
+                new chrome.declarativeContent.PageStateMatcher({
+                    pageUrl: {hostSuffix: '163.16.5.199'},
+                }),
+                new chrome.declarativeContent.PageStateMatcher({
+                    pageUrl: {hostSuffix: 'netholiday.reh.tw'},
+                }),
+            ],
+            actions: [new chrome.declarativeContent.ShowAction()],
+        };
 
-//每次 tab 有變動，檢查現在這個 current tab 是否在指定的 url pattern 底下
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    queryTabsAndShowPageActions({
-        "active": true,
-        "currentWindow": true,
-        "url": urlPattern
+        // Finally, apply our new array of rules
+        let rules = [exampleRule];
+        chrome.declarativeContent.onPageChanged.addRules(rules);
     });
 });
